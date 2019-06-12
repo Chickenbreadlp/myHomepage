@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -28,6 +28,8 @@
       :clipped-left="clipped"
       fixed
       app
+      dark
+      color="primary"
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <v-btn
@@ -58,9 +60,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <v-container>
         <nuxt />
-      </v-container>
     </v-content>
     <v-navigation-drawer
       v-model="rightDrawer"
@@ -80,8 +80,10 @@
     <v-footer
       :fixed="fixed"
       app
+      class="pa-3"
     >
-      <span>&copy; 2019</span>
+      <v-spacer></v-spacer>
+      <span>&copy; 2019 Falk Drieschner</span>
     </v-footer>
   </v-app>
 </template>

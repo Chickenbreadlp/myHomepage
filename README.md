@@ -1,22 +1,20 @@
-# fdrieschner
+# Meine Homepage
+Dies ist der Quell-Code zu meiner Homepage.
 
-> Falk Drieschners Homepage
+## Framework
+Diese Seite wurde mit Nuxt.JS und Vuetify erstellt.
 
-## Build Setup
+## Wie installieren
 
+Wie kann man diesen Quell-Code bei sich zum laufen bringen kann:
 ``` bash
-# install dependencies
-$ npm install
+# Dependencies installieren
+$ npm i
 
-# serve with hot reload at localhost:3000
+# Entwicklungsumgebung starten
 $ npm run dev
 
-# build for production and launch server
+# Produktionumgebung bauen und anschließend ausführen
 $ npm run build
 $ npm start
-
-# generate static project
-$ npm run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
