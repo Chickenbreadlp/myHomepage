@@ -1,0 +1,131 @@
+<template>
+  <v-container>
+    <v-layout align-center justify-center column>
+      <p class="display-1">
+        Über Mich
+      </p>
+      <v-flex xs12 style="width: 100%">
+        <v-layout row>
+          <v-flex sm12 md8>
+            <v-card>
+              <v-card-title class="headline">
+                Falk Drieschner
+              </v-card-title>
+              <v-card-text class="pt-0">
+                <v-list two-line>
+                  <template v-for="(item, index) in knwolegde">
+                    <v-subheader
+                      v-if="item.header"
+                      :key="item.header"
+                    >
+                      {{ item.header }}
+                    </v-subheader>
+
+                    <v-divider
+                      v-else-if="item.divider"
+                      :key="index"
+                      :inset="item.inset"
+                    ></v-divider>
+
+                    <v-list-tile
+                      v-else
+                      :key="item.title"
+                      avatar
+                      @click="openNewTab(item.link)"
+                    >
+                      <v-list-tile-avatar v-if="typeof item.icon === 'string'">
+                        <img :src="item.icon">
+                      </v-list-tile-avatar>
+
+                      <v-list-tile-content>
+                        <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                        <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
+                      </v-list-tile-content>
+                    </v-list-tile>
+                  </template>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'Über'
+    }
+  },
+  data () {
+    return {
+      knwolegde: [
+          { header: 'Allgemein' },
+          {
+            title: 'Männlich'
+          },
+          { divider: true },
+          {
+            title: this.$moment().diff(this.$moment('1999-02-01'), 'years') + ' Jahre alt'
+          },
+          { header: 'Bildung' },
+          {
+            title: 'Erweiterter Realschulabschluss'
+          },
+          { divider: true },
+          {
+            title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
+            subtitle: "Derzeit im 3. Lehrjahr"
+          },
+          { header: 'Sprachkenntnisse' },
+          {
+            title: 'Deutsch',
+            subtitle: "Muttersprache"
+          },
+          { divider: true },
+          {
+            title: 'Englisch',
+            subtitle: "Sehr gute Kenntnisse"
+          },
+          { header: 'Programmiersprachen' },
+          {
+            title: 'Lua',
+            icon:'/icons/Lua-logo-nolabel.svg',
+            subtitle: "Hauptsächlich durch ComputerCraft angelehrnt - Bisher keine nennenswerte Projekte",
+            link: 'http://computercraft.info/'
+          },
+          { divider: true, inset: true },
+          {
+            title: 'C#',
+            icon: '/icons/C_Sharp_wordmark.svg',
+            subtitle: "Viel in der Ausbildung mit zu tun gehabt - Lieblingssprache für Funktionelle Anwendungen",
+            link: 'https://docs.microsoft.com/de-de/dotnet/csharp/tour-of-csharp/'
+          },
+          { divider: true, inset: true },
+          {
+            title: 'JavaScript',
+            icon:'/icons/JS.svg',
+            subtitle: "Gelehrnt mit statischer Web-Entwicklung, Node.JS und Nuxt.JS",
+            link: 'https://nuxtjs.org/'
+          },
+          { divider: true, inset: true },
+          {
+            title: 'PHP',
+            icon:'/icons/PHP-logo.svg',
+            subtitle: "Wenig mit zu tun gehabt, kann mich aber schnell mit zurecht finden",
+            link: 'https://php.net/'
+          }
+        ]
+    }
+  },
+  methods: {
+    openNewTab (link) {
+      if (typeof link === 'string' && link !== '')
+        window.open(link, '_blank');
+    }
+  }
+}
+</script>
