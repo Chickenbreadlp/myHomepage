@@ -182,8 +182,8 @@ export default {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
   }
   .darkbox {
-    box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.2);
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, transparent 72px);
+    box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, transparent 72px);
   }
 </style>
 <style scoped>

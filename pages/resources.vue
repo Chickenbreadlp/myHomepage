@@ -18,7 +18,7 @@
           GITHUB®, the GITHUB® logo design, OCTOCAT® and the OCTOCAT® logo design are exclusive trademarks registered in the United States by GitHub, Inc.
         </p>
         <p>
-          STEAM (kein Zugriff auf diese Infos bei der Arbeit...)
+          Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
         </p>
       </v-card-text>
     </v-card>

@@ -4,20 +4,9 @@
       <v-parallax src="/images/GreenCutted.jpg" height="700">
         <v-container>
           <v-layout align-center justify-center column fill-height>
-            <v-flex xs10 md8 lg6>
-              <v-card>
-                <v-card-title class="display-1">
-                  <v-layout row justify-center>
-                    Willkommen!
-                  </v-layout>
-                </v-card-title>
-                <v-card-text>
-                  Mein Name ist Falk Drieschner, bin Männlich, {{ $moment().diff($moment('1999-02-01'), 'years') }} Jahre alt und aktuell Auszubildender für den Beruf "Fachinformatiker/-in Fachbereich Anwendungsentwicklung".<br>
-                  Anwendungsentwicklung ist nicht nur mein Job sondern auch meine Leidenschaft.<br>
-                  Online bewege ich mich vielfach unter dem Synonym "Chickenbread", manchmal auch mit den Anhängen "lp" oder "-Designs".
-                </v-card-text>
-              </v-card>
-            </v-flex>
+            <p class="display-2 text--elevation-5">
+              Willkommen!
+            </p>
           </v-layout>
         </v-container>
       </v-parallax>
@@ -28,8 +17,15 @@
         <v-flex xs10 md8 lg6>
           <div width="100%">
             <p>
-              In meiner Freizeit entwickle ich gerne kleinere Hilfsanwendungen und helfe bei anderen Open-Source Projekten mit.<br>
+              Mein Name ist Falk Drieschner, bin Männlich, {{ $moment().diff($moment('1999-02-01'), 'years') }} Jahre alt und aktuell Auszubildender für den Beruf "Fachinformatiker/-in Fachbereich Anwendungsentwicklung".<br>
+              Anwendungsentwicklung ist nicht nur mein Job sondern auch meine Leidenschaft.<br>
+              In meiner Freizeit entwickle ich gerne kleinere Hilfsanwendungen und helfe bei anderen Open-Source Projekten mit.
+            </p>
+            <p>
               Ganz unten, auf jeder Seite, finden Sie Kontakmöglichkeiten.<br>
+              Online bewege ich mich vielfach unter dem Synonym "Chickenbread", manchmal auch mit den Anhängen "lp" oder "-Designs".
+            </p>
+            <p>
               Ich habe ein sehr großes Interessen-Spektrum.<br>
               Soft- und Hardware, Virtualisierung und Emulation, Videobearbeitung und Steaming. Nur um ein paar Beispiele zu nennen.
             </p>
@@ -72,6 +68,7 @@
                             align-center
                             justify-center
                             ma-0
+                            style="filter: none;"
                           >
                             <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
                           </v-layout>
@@ -160,3 +157,18 @@ export default {
   }
 }
 </script>
+
+<style>
+  .text--elevation-3 {
+    text-shadow:
+    0px 3px 3px rgba(0,0,0,0.2),
+    0px 3px 4px rgba(0,0,0,0.14),
+    0px 1px 8px rgba(0,0,0,0.12);
+  }
+  .text--elevation-5 {
+    text-shadow:
+    0px 3px 5px rgba(0,0,0,0.2),
+    0px 5px 8px rgba(0,0,0,0.14),
+    0px 1px 14px rgba(0,0,0,0.12)
+  }
+</style>

@@ -101,7 +101,7 @@ export default {
             title: 'Lua',
             icon:'/icons/Lua-logo-nolabel.svg',
             subtitle: "Hauptsächlich durch ComputerCraft angelehrnt - Bisher keine nennenswerte Projekte",
-            link: 'http://computercraft.info/'
+            link: 'http://www.computercraft.info/forums2/'
           },
           { divider: true, inset: true },
           {
