@@ -1,17 +1,17 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
   head: {
-    titleTemplate: 'Falk Drieschner - %s',
+    titleTemplate: 'Falk D. - %s',
     title: 'Falk Drieschner',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Ich heiße Falk Drieschner, ein Anwendungsentwickler, und dies ist meine Homepage' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

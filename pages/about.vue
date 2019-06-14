@@ -5,7 +5,7 @@
         Über Mich
       </p>
       <v-flex xs12 style="width: 100%">
-        <v-layout row>
+        <v-layout align-center row wrap>
           <v-flex sm12 md8>
             <v-card>
               <v-card-title class="headline">
@@ -47,6 +47,16 @@
               </v-card-text>
             </v-card>
           </v-flex>
+          <v-flex sm12 md4>
+            <v-card :class="this.$vuetify.breakpoint.smAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px;">
+              <v-layout justify-end row>
+                <img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg);">
+              </v-layout>
+            </v-card>
+            <!--<div class="ml-5" style="overflow: hidden; height: 900px;">
+              <img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg); margin-left: -650px;">
+            </div>-->
+          </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -57,7 +67,7 @@
 export default {
   head () {
     return {
-      title: 'Über'
+      title: 'Über Mich'
     }
   },
   data () {
@@ -72,10 +82,6 @@ export default {
             title: this.$moment().diff(this.$moment('1999-02-01'), 'years') + ' Jahre alt'
           },
           { header: 'Bildung' },
-          {
-            title: 'Erweiterter Realschulabschluss'
-          },
-          { divider: true },
           {
             title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
             subtitle: "Derzeit im 3. Lehrjahr"

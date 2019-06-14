@@ -12,7 +12,7 @@
                   </v-layout>
                 </v-card-title>
                 <v-card-text>
-                  Mein Name ist Falk Drieschner, bin Männlich, 20 Jahre alt und aktuell Auszubildender für den Beruf "Fachinformatiker/-in Fachbereich Anwendungsentwicklung".<br>
+                  Mein Name ist Falk Drieschner, bin Männlich, {{ $moment().diff($moment('1999-02-01'), 'years') }} Jahre alt und aktuell Auszubildender für den Beruf "Fachinformatiker/-in Fachbereich Anwendungsentwicklung".<br>
                   Anwendungsentwicklung ist nicht nur mein Job sondern auch meine Leidenschaft.<br>
                   Online bewege ich mich vielfach unter dem Synonym "Chickenbread", manchmal auch mit den Anhängen "lp" oder "-Designs".
                 </v-card-text>
@@ -29,7 +29,9 @@
           <div width="100%">
             <p>
               In meiner Freizeit entwickle ich gerne kleinere Hilfsanwendungen und helfe bei anderen Open-Source Projekten mit.<br>
-              Weiter unten finden Sie, Links zu Seiten, wo Sie mich finden können.
+              Ganz unten, auf jeder Seite, finden Sie Kontakmöglichkeiten.<br>
+              Ich habe ein sehr großes Interessen-Spektrum.<br>
+              Soft- und Hardware, Virtualisierung und Emulation, Videobearbeitung und Steaming. Nur um ein paar Beispiele zu nennen.
             </p>
             <p>
               Hier sehen sie ein paar Projekte an denen ich mitgewirkt habe:
@@ -115,21 +117,21 @@ export default {
       projectInfo: [
         {
           name: 'Stream Countdown für OBS',
-          link: 'https://github.com/Chickenbreadlp/Stream-Countdown',
+          link: '/projects/streamCountdown',
           by: 'Mir',
           byLink: '',
           dark: false
         },
         {
           name: 'MenuAPI für C#.NET Konsole',
-          link: 'https://github.com/Chickenbreadlp/Console-Menu-API',
+          link: '/projects/menuAPI',
           by: 'Mir',
           byLink: '',
           dark: true
         },
         {
           name: 'Citra v3DS Manager',
-          link: 'https://github.com/Chickenbreadlp/CitraV3DSManager',
+          link: '/projects/v3DSMan',
           by: 'Mir',
           byLink: '',
           dark: false
@@ -146,8 +148,14 @@ export default {
   },
   methods: {
     openNewTab (link) {
-      if (typeof link === 'string' && link !== '')
-        window.open(link, '_blank');
+      if (typeof link === 'string' && link !== '') {
+        if (link.indexOf('http') < 0) {
+          this.$router.push({ path: link });
+        }
+        else {
+          window.open(link, '_blank');
+        }
+      }
     }
   }
 }

@@ -7,16 +7,16 @@
     </v-layout>
 
     <p>
-      Stream Countdown ist eine Anwendung die es einem erlaubt einen Simplen Countdown zu erstellen und diesen in eine Text-Datei abzuspeichern.<br>
-      Es ist mit Stream Countdown auch möglich die unterschiedlichen Werte des Countdowns (Minuten, Sekunden etc.) ein einer Zeile Text mit Platzhalten zu platzieren.<br>
+      Die Menü API für C#.NET Konsolenanwendungen (vortlaufend "MenuAPI" genannt) ist aus einem Missglückten versuch von mir ein Tetris zu entwickeln entstanden.<br>
+      Für dieses Tetris Projekt hatte ich ein Konsolen Menü geschrieben, von welchem mir das Aussehen gefiehl...<br>
+      Da mir das Menü so gefiehl, habe ich es per Copy &amp; Paste in ein, zwei Schul-Projekten verwendet und fand bei meinem ITS Lehrer anklang.<br>
+      Für eine bessere Benutzbarkeit habe ich dann aus diesem Copy &amp; Past Code eine API geschrieben, die sogar noch mehr kann als die Originale Version in dem Tetris Spiel.<br>
       <br>
-      Zusätzlich sollte die Anwendung eine kleine eigene Scriptsprache mitbringen, mit welcher man ja nach noch verfügbarer Zeit des Countdowns den ebend genannten Text mit Platzhaltern zu steuern.<br>
-      Leider ist die Scriptsprache nie zu einem Fehlerfreien Zustand gekommen.<br>
+      Leider habe ich die MenuAPI nicht sonderlich ausführlich getestet wodurch bis heute noch teils schwere Fehler vorhanden sind.<br>
+      Zeit habe ich allerdings auch keine um diese Fehler aufzusuchen und zu beheben.<br>
       <br>
-      Die Anwendung wurde zur verwendung mit der Streaming Software 'OBS' vorgesehen.<br>
-      <br>
-      <br>
-      Den Funktionstüchtigen Teil der Anwendung verwende ich bis heute noch in meinen privaten Streams.
+      Das Projekt war mein erster Versuch eine API zu schreiben und ist erfolgreich missglückt.<br>
+      Aus diesen Fehlern habe ich gelernt und das Gelernte Erfolgreich in meinem Abschlussprojekt angewendet.
       <a href="https://github.com/Chickenbreadlp/Stream-Countdown">Github Link</a>
     </p>
   </v-container>

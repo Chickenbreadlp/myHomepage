@@ -5,11 +5,13 @@
       clipped
       fixed
       app
+      disable-resize-watcher
     >
       <v-list>
         <v-list-tile
           v-for="(item, i) in items"
           :key="i"
+          @click="drawer = false"
           :to="item.to"
           router
           exact
@@ -43,8 +45,11 @@
         <v-flex xs12 sm8 md6 lg4 xl3>
           <v-card>
             <v-layout row justify-center>
-              <v-btn flat icon to="/projects" style="background-color: #fff">
+              <v-btn flat icon to="/projects" class="projectBtn">
                 <v-icon>home</v-icon>
+              </v-btn>
+              <v-btn flat icon to="/projects/website" class="projectBtn">
+                <v-icon>language</v-icon>
               </v-btn>
             </v-layout>
 
@@ -103,9 +108,9 @@
         <v-sheet color="grey lighten-5">
           <v-layout row justify-center>
             <v-btn flat icon href="https://github.com/Chickenbreadlp"><img src="/icons/GitHub-Mark.svg" width="28px"></v-btn>
-            <v-btn flat icon href="https://twitter.com/Teufel904"><img src="/icons/Twitter_Logo_Blue.svg" width="32px"></v-btn>
+            <v-btn flat icon href="https://twitter.com/Teufel904"><img src="/icons/Twitter_Logo_Blue.svg" width="42px"></v-btn>
             <v-btn flat icon href="https://steamcommunity.com/id/chickenbreadlp"><img src="/icons/Steam_Logo.svg" width="28px"></v-btn>
-            <v-btn flat icon href="mailto:falk@adrieschner.de"><v-icon>email</v-icon></v-btn>
+            <v-btn flat icon href="mailto:katzen.alphabet@gmx.net"><v-icon>email</v-icon></v-btn>
           </v-layout>
         </v-sheet>
       </v-container>
@@ -179,5 +184,13 @@ export default {
   .darkbox {
     box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.2);
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, transparent 72px);
+  }
+</style>
+<style scoped>
+  .projectBtn:before {
+    background-color: rgba(0,0,0,0) !important;
+  }
+  .projectBtn:hover:before, .projectBtn:focus:before {
+    background-color: currentColor !important;
   }
 </style>
