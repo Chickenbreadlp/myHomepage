@@ -17,7 +17,7 @@
       <br>
       <br>
       Den Funktionstüchtigen Teil der Anwendung verwende ich bis heute noch in meinen privaten Streams.
-      <a href="https://github.com/Chickenbreadlp/Stream-Countdown">Github Link</a>
+      <a href="https://github.com/Chickenbreadlp/Stream-Countdown" target="none">Github Link</a>
     </p>
   </v-container>
 </template>

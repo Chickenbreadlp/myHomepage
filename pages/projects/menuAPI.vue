@@ -17,7 +17,7 @@
       <br>
       Das Projekt war mein erster Versuch eine API zu schreiben und ist erfolgreich missglückt.<br>
       Aus diesen Fehlern habe ich gelernt und das Gelernte Erfolgreich in meinem Abschlussprojekt angewendet.
-      <a href="https://github.com/Chickenbreadlp/Stream-Countdown">Github Link</a>
+      <a href="https://github.com/Chickenbreadlp/Stream-Countdown" target="none">Github Link</a>
     </p>
   </v-container>
 </template>

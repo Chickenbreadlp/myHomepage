@@ -10,9 +10,7 @@
           Klicken sie einfach auf ein Projekt oben, das sie interresiert.<br>
           <br>
           Da meine Ausbildung Vollzeit ist, habe ich leider in meiner Privatzeit nicht so viel Zeit um an irgendwelchen Projekten zu arbeiten.<br>
-          Deswegen sind die hier aufgelisteten Projekte nicht sonderlich gut gepflegt und teilweise auch Jahre alt.<br>
-          <br>
-          Ich hoffe, dass die hier Vorgestellten Projekte überzeugend genug sind.
+          Deswegen sind die hier aufgelisteten Projekte nicht sonderlich gut gepflegt und teilweise auch Jahre alt.
         </p>
       </div>
     </v-layout>

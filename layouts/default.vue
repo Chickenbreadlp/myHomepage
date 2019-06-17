@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <div :hidden="isNotIE" style="z-index: 999; color: black; background-color: white;">
+      IE is not Supported!
+    </div>
     <v-navigation-drawer
       v-model="drawer"
       clipped
@@ -123,6 +126,28 @@
       <v-spacer></v-spacer>
       <span>&copy; 2019 Falk Drieschner</span>
     </v-footer>
+    <v-bottom-sheet
+      v-model="cookieBanner"
+      inset
+    >
+      <v-card tile >
+        <v-layout row>
+          <v-card-text>
+            Diese Website verwendet KEINE Cookies, um Ihre Erfahrung zu verbessern.<br>
+            Die neuen Datenschutzrichtlinien werden von einer einfachen informativen Webseite ohne Nutzerdaten oder Werbung direkt erfüllt.<br>
+            Durch Klicken auf "Nicht mehr Anzeigen" Stimmen sie lediglich einer Speicherung dessen zu, dass Sie dieses Banner nicht mehr sehen möchten.<br>
+            <br>
+            0 Werbung, 0 Tracking, 0 Nutzererkennung. So kann das Web funktionieren.
+          </v-card-text>
+          <div>
+            <v-layout column fill-height justify-center>
+              <v-btn flat color="primary" @click="cookieBanner = false">OK</v-btn>
+              <v-btn flat color="green" @click="toggleCookieBanner()">Nicht mehr Anzeigen</v-btn>
+            </v-layout>
+          </div>
+        </v-layout>
+      </v-card>
+    </v-bottom-sheet>
   </v-app>
 </template>
 
@@ -170,7 +195,25 @@ export default {
           dark: false
         }
       ],
-      title: 'Falk Drieschner'
+      title: 'Falk Drieschner',
+      cookieBanner: false,
+      isNotIE: false
+    }
+  },
+  mounted: function () {
+    console.log(localStorage.cookieBanner);
+    if (typeof localStorage.cookieBanner === 'string') {
+      this.cookieBanner = (localStorage.cookieBanner == 'true')
+    }
+    else {
+      this.cookieBanner = true
+    }
+    this.isNotIE = true;
+  },
+  methods: {
+    toggleCookieBanner () {
+      this.cookieBanner = !this.cookieBanner
+      localStorage.cookieBanner = this.cookieBanner
     }
   }
 }
