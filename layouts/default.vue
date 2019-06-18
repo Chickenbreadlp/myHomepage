@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <div :hidden="isNotIE" style="z-index: 999; color: black; background-color: white;">
-      IE is not Supported!
+      <div class="IEOnly" style="display: none;">
+        Internet Explorer is not Supported! Please us a different Browser.
+      </div>
+      <div>
+        JavaScript needs to be enabled, in order for this Page to work.
+      </div>
     </div>
     <v-navigation-drawer
       v-model="drawer"
@@ -226,6 +231,12 @@ export default {
   .darkbox {
     box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, transparent 72px);
+  }
+  _:-ms-input-placeholder, :root .IEOnly {
+    display: block !important;
+    z-index: 1000;
+    background-color: white;
+    height: 100vh;
   }
 </style>
 <style scoped>
