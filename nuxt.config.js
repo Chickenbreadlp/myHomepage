@@ -38,6 +38,14 @@ export default {
     '~/plugins/moment'
   ],
   /*
+  ** Manifest
+  */
+  manifest: {
+    'name': 'Falks Homepage',
+    'short_name': 'Falks Homepage',
+    'description': 'Ich heiße Falk Drieschner, ein Anwendungsentwickler, und dies ist meine Homepage'
+  },
+  /*
   ** Nuxt.js modules
   */
   modules: [
