@@ -61,6 +61,12 @@ export default {
   axios: {
   },
   /*
+  ** Contains special information for generation?
+  */
+  generate: {
+    routes: ['404']
+  },
+  /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
