@@ -38,7 +38,7 @@
       <v-layout row justify-center>
         <v-flex sm12 md10 lg8>
           <v-card>
-            <v-container grid-list-sm fluid>
+            <v-container grid-list-md fluid>
               <v-layout row wrap>
                 <v-flex
                   v-for="n in projectInfo.length"
