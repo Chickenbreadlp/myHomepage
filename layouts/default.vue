@@ -46,14 +46,14 @@
     <v-content>
       <v-layout row justify-center :style="`${$route.path.indexOf('/projects') < 0 ? 'display: none;' : ''}`" class="mb-1 mt-2">
         <v-flex xs12 sm8 md6 lg4 xl3>
-          <v-card>
+          <v-card  ref="projectList">
             <v-layout row justify-center>
               <v-btn flat icon to="/projects" class="projectBtn">
                 <v-icon>home</v-icon>
               </v-btn>
-              <v-btn flat icon to="/projects/website" class="projectBtn">
+              <!--<v-btn flat icon href="https://github.com/Chickenbreadlp/myHomepage" class="projectBtn">
                 <v-icon>language</v-icon>
-              </v-btn>
+              </v-btn>-->
             </v-layout>
 
             <v-container grid-list-sm fluid class="pt-0">

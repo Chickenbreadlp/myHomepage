@@ -65,7 +65,19 @@ export default {
       }
 
       if (this.$route.path.indexOf('/projects') === 0) {
-        subtraction += 210;
+        var layout;
+        for (var i = 0; i < this.$nuxt.$children.length; i++) {
+          if (typeof this.$nuxt.$children[i] !== 'undefined') {
+            layout = this.$nuxt.$children[i];
+          }
+        }
+
+        if (typeof layout.$refs.projectList !== 'undefined') {
+          subtraction += layout.$refs.projectList.$el.clientHeight + 12;
+        }
+        else {
+          subtraction += 210;
+        }
       }
 
       return 'calc(100vh - ' + subtraction + 'px);'

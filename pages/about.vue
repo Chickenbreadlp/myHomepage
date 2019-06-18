@@ -6,7 +6,7 @@
       </p>
       <v-flex xs12 style="width: 100%">
         <v-layout align-center row wrap>
-          <v-flex sm12 md8>
+          <v-flex md12 lg7 xl8>
             <v-card>
               <v-card-title class="headline">
                 Falk Drieschner
@@ -47,8 +47,8 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex sm12 md4>
-            <v-card :class="this.$vuetify.breakpoint.smAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px;">
+          <v-flex md12 lg5 xl4>
+            <v-card :class="this.$vuetify.breakpoint.mdAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px;">
               <v-layout justify-end row>
                 <img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg);">
               </v-layout>
