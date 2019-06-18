@@ -201,7 +201,6 @@ export default {
     }
   },
   mounted: function () {
-    console.log(localStorage.cookieBanner);
     if (typeof localStorage.cookieBanner === 'string') {
       this.cookieBanner = (localStorage.cookieBanner == 'true')
     }
