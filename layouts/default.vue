@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div :hidden="isNotIE" style="z-index: 999; color: black; background-color: white;">
+    <div class="nonWorkingNotice" :hidden="isNotIE">
       <div class="IEOnly" style="display: none;">
         Internet Explorer is not Supported! Please us a different Browser.
       </div>
@@ -231,6 +231,12 @@ export default {
   .darkbox {
     box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, transparent 72px);
+  }
+
+  .nonWorkingNotice {
+    z-index: 999;
+    color: black;
+    background-color: white;
   }
   _:-ms-input-placeholder, :root .IEOnly {
     display: block !important;
