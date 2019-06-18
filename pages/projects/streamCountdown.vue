@@ -13,8 +13,7 @@
       Zusätzlich sollte die Anwendung eine kleine eigene Scriptsprache mitbringen, mit welcher man ja nach noch verfügbarer Zeit des Countdowns den ebend genannten Text mit Platzhaltern zu steuern.<br>
       Leider ist die Scriptsprache nie zu einem Fehlerfreien Zustand gekommen.<br>
       <br>
-      Die Anwendung wurde zur verwendung mit der Streaming Software 'OBS' vorgesehen.<br>
-      <br>
+      Die Anwendung wurde zur Verwendung mit der Streaming Software 'OBS' vorgesehen.<br>
       <br>
       Den Funktionstüchtigen Teil der Anwendung verwende ich bis heute noch in meinen privaten Streams.
       <a href="https://github.com/Chickenbreadlp/Stream-Countdown" target="none">Github Link</a>
