@@ -118,7 +118,7 @@
             <v-btn flat icon href="https://github.com/Chickenbreadlp"><img src="/icons/GitHub-Mark.svg" width="28px"></v-btn>
             <v-btn flat icon href="https://twitter.com/Teufel904"><img src="/icons/Twitter_Logo_Blue.svg" width="42px"></v-btn>
             <v-btn flat icon href="https://steamcommunity.com/id/chickenbreadlp"><img src="/icons/Steam_Logo.svg" width="28px"></v-btn>
-            <v-btn flat icon href="mailto:katzen.alphabet@gmx.net"><v-icon>email</v-icon></v-btn>
+            <v-btn flat icon href="mailto:webmaster@fdrieschner.de"><v-icon>email</v-icon></v-btn>
           </v-layout>
         </v-sheet>
       </v-container>
