@@ -84,7 +84,11 @@ export default {
           { header: 'Bildung' },
           {
             title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
-            subtitle: "Derzeit im 3. Lehrjahr"
+            subtitle: "Abgeschlossen"
+          },
+          {
+            title: 'Erweiterter Sekundarabschluss I',
+            subtitle: "Abgeschlossen"
           },
           { header: 'Sprachkenntnisse' },
           {
