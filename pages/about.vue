@@ -84,11 +84,11 @@ export default {
           { header: 'Bildung' },
           {
             title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
-            subtitle: "Abgeschlossen"
+            subtitle: "2019 - Abgeschlossen"
           },
           {
             title: 'Erweiterter Sekundarabschluss I',
-            subtitle: "Abgeschlossen"
+            subtitle: "2016 - Abgeschlossen"
           },
           { header: 'Sprachkenntnisse' },
           {
@@ -98,7 +98,7 @@ export default {
           { divider: true },
           {
             title: 'Englisch',
-            subtitle: "Sehr gute Kenntnisse"
+            subtitle: "Sehr gute Kenntnisse / Fließend"
           },
           { header: 'Programmiersprachen' },
           {
@@ -111,21 +111,21 @@ export default {
           {
             title: 'C#',
             icon: '/icons/C_Sharp_wordmark.svg',
-            subtitle: "Viel in der Ausbildung mit zu tun gehabt - Lieblingssprache für Funktionelle Anwendungen",
+            subtitle: "Viel in der Ausbildung mit zu tun gehabt - Lieblingssprache für funktionelle Anwendungen",
             link: 'https://docs.microsoft.com/de-de/dotnet/csharp/tour-of-csharp/'
           },
           { divider: true, inset: true },
           {
             title: 'JavaScript',
             icon:'/icons/JS.svg',
-            subtitle: "Gelehrnt mit statischer Web-Entwicklung, Node.JS und Nuxt.JS",
+            subtitle: "Gelernt mit statischer Web-Entwicklung, Node.JS und Nuxt.JS",
             link: 'https://nuxtjs.org/'
           },
           { divider: true, inset: true },
           {
             title: 'PHP',
             icon:'/icons/PHP-logo.svg',
-            subtitle: "Wenig mit zu tun gehabt, kann mich aber schnell mit zurecht finden",
+            subtitle: "Wenig mit zu tun gehabt, kann mich aber schnell mit zurechtfinden",
             link: 'https://php.net/'
           }
         ]

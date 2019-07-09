@@ -8,11 +8,11 @@
 
     <p>
       Citra v3DS Manager ist eine Anwendung, die es einem ermöglicht mehrere "Virtuelle 3DS Systeme" für den 3DS Emulator Citra zu verwalten.
-      Citra Emuliert einen 3DS vollständig und das inkludiert den SysNAND (internen Speicher) und die SD-Karte.<br>
-      Natürlich beinhaltet der Emulierte SysNAND alle informationen über die Konsole (Name, ID, etc.) und alle Speicherdaten der Spiele.
+      Citra emuliert einen 3DS vollständig und das inkludiert den SysNAND (internen Speicher) und die SD-Karte.<br>
+      Natürlich beinhaltet der Emulierte SysNAND alle Informationen über die Konsole (Name, ID, etc.) und alle Speicherdaten der Spiele.
       Entsprechend sind es diese Daten, die von meiner Anwendung hin- und her-kopiert werden.<br>
       <br>
-      Der Benutzer hat mehrere Möglichkeiten diese unterschiedlichen Virtuellen Systeme zu verwalten.
+      Der Benutzer hat mehrere Möglichkeiten diese unterschiedlichen virtuellen Systeme zu verwalten.
       Möglich ist ein Duplizieren, Neu-Erstellen, Umbenennen und Löschen von Systemen.<br>
       <br>
       Citra v3DS Manager ist soweit mein aktuellstes Projekt.
