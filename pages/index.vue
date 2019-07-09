@@ -17,8 +17,8 @@
         <v-flex xs10 md8 lg6>
           <div width="100%">
             <p>
-              Mein Name ist Falk Drieschner, bin Männlich, {{ $moment().diff($moment('1999-02-01'), 'years') }} Jahre alt und aktuell Auszubildender für den Beruf "Fachinformatiker/-in Fachbereich Anwendungsentwicklung".<br>
-              Anwendungsentwicklung ist nicht nur mein Job sondern auch meine Leidenschaft.<br>
+              Mein Name ist Falk Drieschner, bin männlich, {{ $moment().diff($moment('1999-02-01'), 'years') }} Jahre alt und aktuell als Anwendungsentwickler tätig.<br>
+              Anwendungsentwicklung ist nicht nur mein Job, sondern auch meine Leidenschaft.<br>
               In meiner Freizeit entwickle ich gerne kleinere Hilfsanwendungen und helfe bei anderen Open-Source Projekten mit.
             </p>
             <p>
@@ -27,7 +27,7 @@
             </p>
             <p>
               Ich habe ein sehr großes Interessen-Spektrum.<br>
-              Soft- und Hardware, Virtualisierung und Emulation, Videobearbeitung und Steaming. Nur um ein paar Beispiele zu nennen.
+              Soft- und Hardware, Virtualisierung und Emulation, Videobearbeitung und Streaming. Nur um ein paar Beispiele zu nennen.
             </p>
             <p>
               Hier sehen sie ein paar Projekte an denen ich mitgewirkt habe:
