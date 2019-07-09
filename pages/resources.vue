@@ -113,9 +113,6 @@ export default {
       }
     }
   },
-  mounted: function () {
-    console.log(this.packages)
-  },
   methods: {
     showLicenseDialog(moduleData) {
       this.licenseDialog = {
@@ -124,7 +121,6 @@ export default {
         license: moduleData.license,
         licenseText: moduleData.licenseText.split('\n').join('<br>')
       }
-      console.log(this.licenseDialog)
     }
   }
 }
