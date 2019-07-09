@@ -56,9 +56,14 @@
               <v-btn flat icon to="/projects" class="projectBtn">
                 <v-icon>home</v-icon>
               </v-btn>
-              <!--<v-btn flat icon href="https://github.com/Chickenbreadlp/myHomepage" class="projectBtn">
-                <v-icon>language</v-icon>
-              </v-btn>-->
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on }">
+                  <v-btn flat icon href="https://github.com/Chickenbreadlp/myHomepage" class="projectBtn" v-on="on">
+                    <v-icon>language</v-icon>
+                  </v-btn>
+                </template>
+                <span>Quellcode dieser Webseite</span>
+              </v-tooltip>
             </v-layout>
 
             <v-container grid-list-sm fluid class="pt-0">
