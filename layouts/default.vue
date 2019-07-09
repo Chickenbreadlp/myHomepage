@@ -2,10 +2,10 @@
   <v-app>
     <div class="nonWorkingNotice" :hidden="isNotIE">
       <div class="IEOnly" style="display: none;">
-        Internet Explorer is not Supported! Please us a different Browser.
+        Internet Explorer wird von dieser Seite nicht unterstützt. Bitte verwenden sie einen aktuelleren Browser.
       </div>
       <div>
-        JavaScript needs to be enabled, in order for this Page to work.
+        Diese Seite benötigt JavaScript für die korrekte Funktionsweise.
       </div>
     </div>
     <v-navigation-drawer
@@ -239,6 +239,7 @@ export default {
   }
 
   .nonWorkingNotice {
+    position: fixed;
     z-index: 999;
     color: black;
     background-color: white;
