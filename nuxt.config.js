@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import vuetifyDE from 'vuetify/es5/locale/de'
 
 export default {
   mode: 'universal',
@@ -82,6 +83,10 @@ export default {
       warning: colors.amber.base,
       error: colors.deepOrange.accent4,
       success: colors.green.accent3
+    },
+    lang: {
+      locales: { de: vuetifyDE },
+      current: 'de'
     }
   },
   /*

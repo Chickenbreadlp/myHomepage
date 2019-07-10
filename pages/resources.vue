@@ -8,7 +8,7 @@
 
     <v-card>
       <v-card-title class="headline">
-        Copyright Notices von GitHub, Twitter und Steam:
+        Copyright Informationen zu verwendeten Logos
       </v-card-title>
       <v-card-text>
         <p>
@@ -25,15 +25,25 @@
 
     <v-card class="mt-3">
       <v-card-title class="headline">
-        Verwendete Ressourcen:
+        Verwendete Module
+        <v-spacer />
+        <v-text-field
+          v-model="tableSearch"
+          append-icon="search"
+          label="Suchen"
+          single-line
+          hide-details
+        ></v-text-field>
       </v-card-title>
       <v-card-text>
         <v-data-table
           :headers="headers"
           :items="packages"
           :expand="expand"
+          :search="tableSearch"
           item-key="name"
           class="elevation-1"
+          must-sort
         >
           <template v-slot:items="props">
             <tr @click="props.expanded = !props.expanded">
@@ -85,7 +95,7 @@
     >
       <v-card>
         <v-card-title class="headline">
-          Lizenstext von {{ licenseDialog.packageName }}
+          Lizenztext von '{{ licenseDialog.packageName }}'
         </v-card-title>
         <v-card-text v-html="licenseDialog.licenseText" />
       </v-card>
@@ -109,9 +119,10 @@ export default {
         { text: 'Name', align: 'left', value: 'name' },
         { text: 'Version', value: 'version' },
         { text: 'Autor', align: 'left', value: 'author' },
-        { text: 'Lizens', align: 'left', value: 'license' },
+        { text: 'Lizenz', align: 'left', value: 'license' },
         { text: '', value: 'name', sortable: false }
       ],
+      tableSearch: '',
 
       licenseDialog: {
         show: false,
