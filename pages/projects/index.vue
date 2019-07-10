@@ -9,7 +9,7 @@
           Hier können sie meine Projekte sehen, die ich in meiner Freizeit entwickelt habe.<br>
           Klicken sie einfach auf ein Projekt oben, das sie interresiert.<br>
           <br>
-          Da meine Ausbildung Vollzeit ist, habe ich leider in meiner Privatzeit nicht so viel Zeit um an irgendwelchen Projekten zu arbeiten.<br>
+          Da ich Vollzeit arbeite, habe ich leider in meiner Freizeit nicht so viel Zeit um an irgendwelchen Projekten zu arbeiten.<br>
           Deswegen sind die hier aufgelisteten Projekte nicht sonderlich gut gepflegt und teilweise auch Jahre alt.
         </p>
       </div>

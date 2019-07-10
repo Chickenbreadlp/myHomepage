@@ -8,6 +8,11 @@
               Willkommen!
             </p>
           </v-layout>
+          <v-layout align-end justify-start row floating>
+            <p class="caption text--elevation-3">
+              Bild &copy; 2018 Falk Drieschner
+            </p>
+          </v-layout>
         </v-container>
       </v-parallax>
     </v-sheet>
@@ -153,18 +158,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .text--elevation-3 {
-    text-shadow:
-    0px 3px 3px rgba(0,0,0,0.2),
-    0px 3px 4px rgba(0,0,0,0.14),
-    0px 1px 8px rgba(0,0,0,0.12);
-  }
-  .text--elevation-5 {
-    text-shadow:
-    0px 3px 5px rgba(0,0,0,0.2),
-    0px 5px 8px rgba(0,0,0,0.14),
-    0px 1px 14px rgba(0,0,0,0.12)
-  }
-</style>

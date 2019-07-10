@@ -47,15 +47,22 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex md12 lg5 xl4>
-            <v-card :class="this.$vuetify.breakpoint.mdAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px;">
-              <v-layout justify-end row>
-                <img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg);">
-              </v-layout>
+          <v-flex xs12 sm12 md12 lg5 xl4>
+            <v-card :class="this.$vuetify.breakpoint.mdAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px">
+              <v-img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg);" position="end end">
+                <v-layout
+                  align-end
+                  justify-start
+                  fill-height
+                  white--text
+                  style="transform: rotate(180deg);"
+                >
+                  <div
+                    class="caption pl-1 text-box"
+                  >&copy; 2019 Falk Drieschner</div>
+                </v-layout>
+              </v-img>
             </v-card>
-            <!--<div class="ml-5" style="overflow: hidden; height: 900px;">
-              <img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg); margin-left: -650px;">
-            </div>-->
           </v-flex>
         </v-layout>
       </v-flex>
@@ -139,3 +146,12 @@ export default {
   }
 }
 </script>
+
+<style>
+  .text-box {
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,.35);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,.35);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,.35);
+    background-color: rgba(0,0,0,.35)
+  }
+</style>
