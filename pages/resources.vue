@@ -42,22 +42,30 @@
               <td>{{ props.item.author.name }}</td>
               <td>{{ props.item.license }}</td>
               <td>
-                <v-btn
-                  :disabled="typeof props.item.homepage !== 'string'"
-                  small
-                  icon
-                  :href="props.item.homepage"
-                >
-                  <v-icon>language</v-icon>
-                </v-btn>
-                <v-btn
-                  :disabled="props.item.licenseText === ''"
-                  small
-                  icon
-                  @click="showLicenseDialog(props.item)"
-                >
-                  <v-icon>flag</v-icon>
-                </v-btn>
+                <v-tooltip top :disabled="typeof props.item.homepage !== 'string'">
+                  <v-btn
+                    :disabled="typeof props.item.homepage !== 'string'"
+                    slot="activator"
+                    small
+                    icon
+                    :href="props.item.homepage"
+                  >
+                    <v-icon>language</v-icon>
+                  </v-btn>
+                  <span>Webseite</span>
+                </v-tooltip>
+                <v-tooltip top :disabled="props.item.licenseText === ''">
+                  <v-btn
+                    :disabled="props.item.licenseText === ''"
+                    slot="activator"
+                    small
+                    icon
+                    @click="showLicenseDialog(props.item)"
+                  >
+                    <v-icon>flag</v-icon>
+                  </v-btn>
+                  <span>Lizenztext anzeigen</span>
+                </v-tooltip>
               </td>
             </tr>
           </template>

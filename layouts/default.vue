@@ -57,11 +57,15 @@
                 <v-icon>home</v-icon>
               </v-btn>
               <v-tooltip bottom>
-                <template v-slot:activator="{ on }">
-                  <v-btn flat icon href="https://github.com/Chickenbreadlp/myHomepage" class="projectBtn" v-on="on">
-                    <v-icon>language</v-icon>
-                  </v-btn>
-                </template>
+                <v-btn
+                  slot="activator"
+                  flat
+                  icon
+                  href="https://github.com/Chickenbreadlp/myHomepage"
+                  class="projectBtn"
+                >
+                  <v-icon>language</v-icon>
+                </v-btn>
                 <span>Quellcode dieser Webseite</span>
               </v-tooltip>
             </v-layout>
