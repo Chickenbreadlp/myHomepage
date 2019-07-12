@@ -2,7 +2,116 @@
   <v-app>
     <div class="nonWorkingNotice" :hidden="isNotIE">
       <div class="IEOnly" style="display: none;">
-        Internet Explorer wird von dieser Seite nicht unterstützt. Bitte verwenden sie einen aktuelleren Browser.
+        <div style="margin-bottom: 20px">
+          Um die Vollständige Seite sehen zu können, wechseln sie bitte den Browser auf einen aus der folgenden Auswahl:<br>
+          <ul>
+            <li><a href="https://www.microsoftedgeinsider.com/">Microsoft Edge Insider</a> (Persönliche Empfehlung)</li>
+            <li><a href="https://www.mozilla.org/firefox/new/">Mozilla Firefox</a></li>
+            <li><a href="https://www.google.com/chrome/">Google Chrome</a></li>
+            <li><a href="https://www.opera.com/">Opera</a></li>
+            <li><a href="https://vivaldi.com/">Vivaldi</a></li>
+            <li><a href="https://brave.com">Brave</a></li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 30px">
+          <p class="display-1">
+            Über Mich
+          </p>
+
+          <div style="float: right; width: 25%">
+            <div style="overflow: hidden">
+              <img src="/images/IMG_20190611_152043.jpg" width="195%" style="transform: rotate(180deg); float: right">
+            </div>
+          </div>
+
+          <p class="headline">Allgemein</p>
+          <div>
+            <p class="subheading">Falk Drieschner</p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <p class="subheading">Männlich</p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <p class="subheading">
+              {{ this.$moment().diff(this.$moment('1999-02-01'), 'years') }} Jahre alt
+            </p>
+          </div>
+
+          <p class="headline">Bildung</p>
+          <div>
+            <div class="subheading">Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung</div>
+            <p class="grey--text text--darken-1">
+              2019 - Abgeschlossen
+            </p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <div class="subheading">Erweiterter Sekundarabschluss I</div>
+            <p class="grey--text text--darken-1">
+              2016 - Abgeschlossen
+            </p>
+          </div>
+
+          <p class="headline">Sprachkenntnisse</p>
+          <div>
+            <div class="subheading">Deutsch</div>
+            <p class="grey--text text--darken-1">
+              Muttersprache
+            </p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <div class="subheading">Englisch</div>
+            <p class="grey--text text--darken-1">
+              Sehr gute Kenntnisse / Fließend
+            </p>
+          </div>
+
+          <p class="headline">Programmiersprachen</p>
+          <div>
+            <div class="subheading"><a href="http://www.computercraft.info/forums2/" rel="noopener noreferrer" target="_blank">Lua</a></div>
+            <p class="grey--text text--darken-1">
+              Hauptsächlich durch ComputerCraft angelehrnt - Bisher keine nennenswerte Projekte
+            </p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <div class="subheading"><a href="https://docs.microsoft.com/de-de/dotnet/csharp/tour-of-csharp/" rel="noopener noreferrer" target="_blank">C#</a></div>
+            <p class="grey--text text--darken-1">
+              Viel in der Ausbildung mit zu tun gehabt - Lieblingssprache für funktionelle Anwendungen
+            </p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <div class="subheading"><a href="https://nuxtjs.org/" rel="noopener noreferrer" target="_blank">JavaScript</a></div>
+            <p class="grey--text text--darken-1">
+              Gelernt mit statischer Web-Entwicklung, Node.JS und Nuxt.JS
+            </p>
+          </div>
+          <hr width="600px" align="left">
+          <div>
+            <div class="subheading"><a href="https://php.net/" rel="noopener noreferrer" target="_blank">PHP</a></div>
+            <p class="grey--text text--darken-1">
+              Wenig mit zu tun gehabt, kann mich aber schnell mit zurechtfinden
+            </p>
+          </div>
+
+          <p class="headline">Kontakt</p>
+          <div>
+            <p class="subheading">
+              <a href="https://github.com/Chickenbreadlp" rel="noopener noreferrer" target="_blank">GitHub</a>
+              <a href="https://xing.com/profile/Falk_Drieschner" rel="noopener noreferrer" target="_blank">Xing</a>
+              <a href="https://twitter.com/Teufel904" rel="noopener noreferrer" target="_blank">Twitter</a>
+              <a href="https://steamcommunity.com/id/chickenbreadlp" rel="noopener noreferrer" target="_blank">Steam</a>
+              <a href="mailto:webmaster@fdrieschner.de">E-Mail</a>
+            </p>
+          </div>
+        </div>
+        <div class="IEFooter">
+          &copy; 2019 Falk Drieschner
+        </div>
       </div>
       <div>
         Diese Seite benötigt JavaScript für die korrekte Funktionsweise.
@@ -48,7 +157,7 @@
       </v-toolbar-title>
       <v-spacer />
     </v-toolbar>
-    <v-content>
+    <v-content class="NotIE">
       <v-layout row justify-center :style="`${$route.path.indexOf('/projects') < 0 ? 'display: none;' : ''}`" class="mb-1 mt-2">
         <v-flex xs12 sm8 md6 lg4 xl3>
           <v-card  ref="projectList">
@@ -124,10 +233,21 @@
       <v-container fluid class="pt-0">
         <v-sheet color="grey lighten-5">
           <v-layout row justify-center>
-            <v-btn flat icon href="https://github.com/Chickenbreadlp"><img src="/icons/GitHub-Mark.svg" width="28px"></v-btn>
-            <v-btn flat icon href="https://twitter.com/Teufel904"><img src="/icons/Twitter_Logo_Blue.svg" width="42px"></v-btn>
-            <v-btn flat icon href="https://steamcommunity.com/id/chickenbreadlp"><img src="/icons/Steam_Logo.svg" width="28px"></v-btn>
-            <v-btn flat icon href="mailto:webmaster@fdrieschner.de"><v-icon>email</v-icon></v-btn>
+            <v-btn flat icon href="https://github.com/Chickenbreadlp" rel="noopener noreferrer" target="_blank">
+              <img src="/icons/GitHub-Mark.svg" width="28px">
+            </v-btn>
+            <v-btn flat icon href="https://xing.com/profile/Falk_Drieschner" rel="noopener noreferrer" target="_blank">
+              <img src="/icons/icon-xing.svg" width="60px">
+            </v-btn>
+            <v-btn flat icon href="https://twitter.com/Teufel904" rel="noopener noreferrer" target="_blank">
+              <img src="/icons/Twitter_Logo_Blue.svg" width="42px">
+            </v-btn>
+            <v-btn flat icon href="https://steamcommunity.com/id/chickenbreadlp" rel="noopener noreferrer" target="_blank">
+              <img src="/icons/Steam_Logo.svg" width="28px">
+            </v-btn>
+            <v-btn flat icon href="mailto:webmaster@fdrieschner.de">
+              <v-icon>email</v-icon>
+            </v-btn>
           </v-layout>
         </v-sheet>
       </v-container>
@@ -247,12 +367,39 @@ export default {
     z-index: 999;
     color: black;
     background-color: white;
+    width: 100vw;
   }
-  _:-ms-input-placeholder, :root .IEOnly {
-    display: block !important;
-    z-index: 1000;
-    background-color: white;
-    height: 100vh;
+
+  @media screen and (min-width:0\0) {
+    .nonWorkingNotice {
+      width: calc(100vw - 17px);
+    }
+    .IEOnly {
+      display: block !important;
+      z-index: 1000;
+      background-color: white;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+    .IEFooter {
+      position: fixed;
+      bottom: 0;
+      right: 17px;
+      left: 0;
+
+      height: 20px;
+      padding-right: 5px;
+
+      background-color: #ccc;
+
+      text-align: right;
+    }
+
+    .NotIE {
+      display: none !important;
+      overflow: hidden;
+    }
   }
 
   .text--elevation-3 {
