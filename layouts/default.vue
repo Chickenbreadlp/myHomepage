@@ -375,6 +375,8 @@ export default {
   }
 
   .imageRotation {
+    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
