@@ -2,7 +2,7 @@
   <v-app>
     <div class="nonWorkingNotice" :hidden="isNotIE">
       <div class="IEOnly" style="display: none;">
-        <div style="margin-bottom: 20px">
+        <div style="margin-bottom: 20px;" class="warning">
           Um die Vollständige Seite sehen zu können, wechseln sie bitte den Browser auf einen aus der folgenden Auswahl:<br>
           <ul>
             <li><a href="https://www.microsoftedgeinsider.com/">Microsoft Edge Insider</a> (Persönliche Empfehlung)</li>
@@ -13,29 +13,33 @@
             <li><a href="https://brave.com">Brave</a></li>
           </ul>
         </div>
-        <div style="margin-bottom: 30px">
+        <div style="margin-bottom: 60px">
           <p class="display-1">
             Über Mich
           </p>
 
           <div style="float: right; width: 25%">
             <div style="overflow: hidden">
-              <img src="/images/IMG_20190611_152043.jpg" width="195%" style="transform: rotate(180deg); float: right">
+              <img src="/images/IMG_20190611_152043.jpg" class="imageRotation" width="195%" style="float: right">
             </div>
           </div>
 
           <p class="headline">Allgemein</p>
           <div>
-            <p class="subheading">Falk Drieschner</p>
+            <div class="subheading">Falk Drieschner</div>
+            <p class="grey--text text--darken-1">
+            </p>
           </div>
           <hr width="600px" align="left">
           <div>
-            <p class="subheading">Männlich</p>
+            <div class="subheading">Männlich</div>
+            <p class="grey--text text--darken-1">
+            </p>
           </div>
           <hr width="600px" align="left">
           <div>
-            <p class="subheading">
-              {{ this.$moment().diff(this.$moment('1999-02-01'), 'years') }} Jahre alt
+            <div class="subheading">{{ this.$moment().diff(this.$moment('1999-02-01'), 'years') }} Jahre alt</div>
+            <p class="grey--text text--darken-1">
             </p>
           </div>
 
@@ -370,6 +374,12 @@ export default {
     width: 100vw;
   }
 
+  .imageRotation {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
   @media screen and (min-width:0\0) {
     .nonWorkingNotice {
       width: calc(100vw - 17px);
@@ -380,7 +390,7 @@ export default {
       background-color: white;
       height: 100vh;
       overflow-y: scroll;
-      padding: 10px;
+      padding: 30px;
     }
     .IEFooter {
       position: fixed;
@@ -388,10 +398,10 @@ export default {
       right: 17px;
       left: 0;
 
-      height: 20px;
-      padding-right: 5px;
+      height: 40px;
+      padding: 10px 5px;
 
-      background-color: #ccc;
+      background-color: #f5f5f5;
 
       text-align: right;
     }
