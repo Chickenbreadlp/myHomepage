@@ -117,7 +117,7 @@
           &copy; 2019 Falk Drieschner
         </div>
       </div>
-      <div>
+      <div class="NotIE">
         Diese Seite benötigt JavaScript für die korrekte Funktionsweise.
       </div>
     </div>
@@ -375,29 +375,25 @@ export default {
   }
 
   .imageRotation {
-    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 
   @media screen and (min-width:0\0) {
     .nonWorkingNotice {
       width: calc(100vw - 17px);
+      position: absolute;
     }
     .IEOnly {
       display: block !important;
       z-index: 1000;
       background-color: white;
       height: 100vh;
-      overflow-y: scroll;
       padding: 30px;
     }
     .IEFooter {
       position: fixed;
       bottom: 0;
-      right: 17px;
+      right: 0;
       left: 0;
 
       height: 40px;
