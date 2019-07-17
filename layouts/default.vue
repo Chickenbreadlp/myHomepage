@@ -387,7 +387,7 @@ export default {
       display: block !important;
       z-index: 1000;
       background-color: white;
-      height: 100vh;
+      min-height: 100vh;
       padding: 30px;
     }
     .IEFooter {
