@@ -163,7 +163,7 @@
     </v-toolbar>
     <v-content class="NotIE">
       <v-layout row justify-center :style="`${$route.path.indexOf('/projects') < 0 ? 'display: none;' : ''}`" class="mb-1 mt-2">
-        <v-flex xs12 sm8 md6 lg4 xl3>
+        <v-flex xs12 sm8 md6 lg5 xl4>
           <v-card  ref="projectList">
             <v-layout row justify-center>
               <v-btn flat icon to="/projects" class="projectBtn">
@@ -188,7 +188,7 @@
                 <v-flex
                   v-for="n in projects.length"
                   :key="n"
-                  xs4
+                  xs3
                   d-flex
                 >
                   <v-hover>
@@ -331,6 +331,11 @@ export default {
           name: 'Citra v3DS Manager',
           link: 'v3DSMan',
           dark: false
+        },
+        {
+          name: 'npmLister',
+          link: 'npmlister',
+          dark: true
         }
       ],
       title: 'Falk Drieschner',

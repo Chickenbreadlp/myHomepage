@@ -41,14 +41,14 @@
         </v-flex>
       </v-layout>
       <v-layout row justify-center>
-        <v-flex sm12 md10 lg8>
+        <v-flex sm12 md10 lg8 xl5>
           <v-card>
             <v-container grid-list-md fluid>
               <v-layout row wrap>
                 <v-flex
                   v-for="n in projectInfo.length"
                   :key="n"
-                  xs3
+                  xs4
                   d-flex
                 >
                   <v-hover>
@@ -133,6 +133,13 @@ export default {
           by: 'Mir',
           byLink: '',
           dark: false
+        },
+        {
+          name: 'npmLister',
+          link: '/projects/npmlister',
+          by: 'Mir',
+          byLink: '',
+          dark: true
         },
         {
           name: 'ETS2/ATS Local Radio',
