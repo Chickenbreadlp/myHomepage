@@ -12,8 +12,9 @@
             <li><a href="https://vivaldi.com/">Vivaldi</a></li>
             <li><a href="https://brave.com">Brave</a></li>
           </ul>
+          Ich habe die Webseite mit den oben genannten Browsern in den jeweils aktuellsten Versionen getestet (Stand: 25.07.2019)
         </div>
-        <div style="margin-bottom: 60px">
+        <div style="margin-bottom: 40px">
           <p class="display-1">
             Über Mich
           </p>
@@ -374,7 +375,7 @@ export default {
   .nonWorkingNotice {
     position: fixed;
     z-index: 999;
-    color: black;
+    color: rgba(0, 0, 0, 0.87);
     background-color: white;
     width: 100vw;
   }
@@ -391,7 +392,7 @@ export default {
     .IEOnly {
       display: block !important;
       z-index: 1000;
-      background-color: white;
+      background-color: #fafafa;
       min-height: 100vh;
       padding: 30px;
     }
