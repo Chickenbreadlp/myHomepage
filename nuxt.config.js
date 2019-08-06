@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import vuetifyDE from 'vuetify/es5/locale/de'
+import de from 'vuetify/es5/locale/de'
 
 export default {
   mode: 'universal',
@@ -18,12 +18,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Ich heiße Falk Drieschner, ein Anwendungsentwickler, und dies ist meine Homepage' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -75,18 +70,36 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
+    customVariables: ['~/assets/variables.scss'],
     theme: {
-      primary: colors.lightBlue.darken2,
-      accent: colors.lightBlue.accent3,
-      secondary: colors.cyan.darken3,
-      info: colors.teal.lighten1,
-      warning: colors.amber.base,
-      error: colors.deepOrange.accent4,
-      success: colors.green.accent3
+      dark: false,
+      themes: {
+        light: {
+          primary: colors.lightBlue.darken2,
+          accent: colors.lightBlue.accent3,
+          secondary: colors.cyan.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        },
+        dark: {
+          primary: colors.lightBlue.darken2,
+          accent: colors.lightBlue.accent3,
+          secondary: colors.cyan.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    },
+    icons: {
+      iconfont: 'mdi' // default - only for display purposes
     },
     lang: {
-      locales: { de: vuetifyDE },
-      current: 'de'
+      locales: { de },
+      current: 'de',
     }
   },
   /*

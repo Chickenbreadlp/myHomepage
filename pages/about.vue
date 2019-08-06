@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout align-center justify-center column>
+    <v-layout align-center column>
       <p class="display-1">
         Über Mich
       </p>
@@ -27,21 +27,20 @@
                       :inset="item.inset"
                     ></v-divider>
 
-                    <v-list-tile
+                    <v-list-item
                       v-else
                       :key="item.title"
-                      avatar
                       @click="openNewTab(item.link)"
                     >
-                      <v-list-tile-avatar v-if="typeof item.icon === 'string'">
+                      <v-list-item-avatar v-if="typeof item.icon === 'string'">
                         <img :src="item.icon">
-                      </v-list-tile-avatar>
+                      </v-list-item-avatar>
 
-                      <v-list-tile-content>
-                        <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                        <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
+                      <v-list-item-content>
+                        <v-list-item-title v-html="item.title"></v-list-item-title>
+                        <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
                   </template>
                 </v-list>
               </v-card-text>
@@ -93,6 +92,7 @@ export default {
             title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
             subtitle: "2019 - Abgeschlossen"
           },
+          { divider: true },
           {
             title: 'Erweiterter Sekundarabschluss I',
             subtitle: "2016 - Abgeschlossen"

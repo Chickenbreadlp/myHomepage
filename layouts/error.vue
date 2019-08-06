@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <v-layout column align-center justify-center>
-      <v-card class="elevation-8">
+  <v-container style="width: 100%;">
+    <v-layout column align-center justify-center style="width: 100%;">
+      <v-card class="elevation-8" style="width: 100%;">
         <div class="errorGif" :style="`height: ` + errorGifHeight">
           <v-layout align-start justify-end fill-height column>
             <div id="errorGifText" class="display-1 errorGifText pa-2 ma-3">
@@ -93,7 +93,7 @@ export default {
   .errorGif {
     background: url('/moss.gif') no-repeat 50% ;
     background-size: cover;
-    width: 95vw;
+    width: 100%;
     min-height: 88px;
   }
   .errorGifText {

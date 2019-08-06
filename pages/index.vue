@@ -1,15 +1,14 @@
 <template>
-  <v-layout align-center justify-center column>
-    <v-sheet min-width="100%">
+  <v-layout align-center column>
+    <v-sheet min-width="100%" tile>
       <v-parallax src="/images/GreenCutted.jpg" height="700">
-        <v-container>
-          <v-layout align-center justify-center column fill-height>
+        <v-container fill-height>
+          <v-layout align-center justify-space-between column fill-height>
+            <p></p>
             <p class="display-2 text--elevation-5">
               Willkommen!
             </p>
-          </v-layout>
-          <v-layout align-end justify-start row floating>
-            <p class="caption text--elevation-3">
+            <p class="caption text--elevation-3" style="width: 100%">
               Bild &copy; 2018 Falk Drieschner
             </p>
           </v-layout>
@@ -18,7 +17,7 @@
     </v-sheet>
 
     <v-container>
-      <v-layout align-center justify-center column>
+      <v-layout align-center column>
         <v-flex xs10 md8 lg6>
           <div width="100%">
             <p>
@@ -58,6 +57,7 @@
                       slot-scope="{ hover }"
                       :class="`d-flex elevation-${hover ? 8 : 0}`"
                       @click="openNewTab(projectInfo[n-1].link)"
+                      width="100%"
 
                       style="cursor: pointer"
                     >
@@ -66,6 +66,7 @@
                         :lazy-src="`/projects/${n - 1}.png`"
                         aspect-ratio="1"
                         class="grey lighten-2"
+                        width="100%"
                       >
                         <template v-slot:placeholder>
                           <v-layout

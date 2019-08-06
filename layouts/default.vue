@@ -128,9 +128,12 @@
       fixed
       app
       disable-resize-watcher
+      width="270px"
     >
-      <v-list>
-        <v-list-tile
+      <v-list
+        nav
+      >
+        <v-list-item
           v-for="(item, i) in items"
           :key="i"
           @click="drawer = false"
@@ -138,48 +141,50 @@
           router
           exact
         >
-          <v-list-tile-action>
+          <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
-          </v-list-tile-content>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
+    <v-app-bar
       clipped-left
       fixed
       app
       dark
       color="primary"
     >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-toolbar-title>
         <nuxt-link to="/" style="color: white; text-decoration: none;">
           {{ title }}
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
-    </v-toolbar>
+    </v-app-bar>
     <v-content class="NotIE">
       <v-layout row justify-center :style="`${$route.path.indexOf('/projects') < 0 ? 'display: none;' : ''}`" class="mb-1 mt-2">
         <v-flex xs12 sm8 md6 lg5 xl4>
           <v-card  ref="projectList">
             <v-layout row justify-center>
-              <v-btn flat icon to="/projects" class="projectBtn">
-                <v-icon>home</v-icon>
+              <v-btn text icon to="/projects" class="projectBtn">
+                <v-icon>mdi-home</v-icon>
               </v-btn>
               <v-tooltip bottom>
-                <v-btn
-                  slot="activator"
-                  flat
-                  icon
-                  href="https://github.com/Chickenbreadlp/myHomepage"
-                  class="projectBtn"
-                >
-                  <v-icon>language</v-icon>
-                </v-btn>
+                <template v-slot:activator="{ on }">
+                  <v-btn
+                    v-on="on"
+                    text
+                    icon
+                    href="https://github.com/Chickenbreadlp/myHomepage"
+                    class="projectBtn"
+                  >
+                    <v-icon>mdi-web</v-icon>
+                  </v-btn>
+                </template>
                 <span>Quellcode dieser Webseite</span>
               </v-tooltip>
             </v-layout>
@@ -199,6 +204,7 @@
                       slot-scope="{ hover }"
                       :class="`d-flex elevation-${hover ? 8 : 0}`"
                       @click="$router.push({ path: '/projects/' + projects[n-1].link })"
+                      width="100%"
 
                       style="cursor: pointer"
                     >
@@ -207,6 +213,7 @@
                         :lazy-src="`/projects/${n - 1}.png`"
                         aspect-ratio="1"
                         class="grey lighten-2"
+                        width="100%"
                       >
                         <template v-slot:placeholder>
                           <v-layout
@@ -236,25 +243,25 @@
       </v-layout>
       <nuxt />
       <v-container fluid class="pt-0">
-        <v-sheet color="grey lighten-5">
+        <div>
           <v-layout row justify-center>
-            <v-btn flat icon href="https://github.com/Chickenbreadlp" rel="noopener noreferrer" target="_blank">
+            <v-btn icon :class="[$vuetify.theme.dark ? 'inverted' : '']" href="https://github.com/Chickenbreadlp" rel="noopener noreferrer" target="_blank">
               <img src="/icons/GitHub-Mark.svg" width="28px">
             </v-btn>
-            <v-btn flat icon href="https://xing.com/profile/Falk_Drieschner" rel="noopener noreferrer" target="_blank">
+            <v-btn icon href="https://xing.com/profile/Falk_Drieschner" rel="noopener noreferrer" target="_blank">
               <img src="/icons/icon-xing.svg" width="60px">
             </v-btn>
-            <v-btn flat icon href="https://twitter.com/Teufel904" rel="noopener noreferrer" target="_blank">
+            <v-btn icon href="https://twitter.com/Teufel904" rel="noopener noreferrer" target="_blank">
               <img src="/icons/Twitter_Logo_Blue.svg" width="42px">
             </v-btn>
-            <v-btn flat icon href="https://steamcommunity.com/id/chickenbreadlp" rel="noopener noreferrer" target="_blank">
+            <v-btn icon :class="[$vuetify.theme.dark ? 'inverted' : '']" href="https://steamcommunity.com/id/chickenbreadlp" rel="noopener noreferrer" target="_blank">
               <img src="/icons/Steam_Logo.svg" width="28px">
             </v-btn>
-            <v-btn flat icon href="mailto:webmaster@fdrieschner.de">
-              <v-icon>email</v-icon>
+            <v-btn icon :color="$vuetify.theme.dark ? '' : 'black'" href="mailto:webmaster@fdrieschner.de">
+              <v-icon>mdi-email</v-icon>
             </v-btn>
           </v-layout>
-        </v-sheet>
+        </div>
       </v-container>
     </v-content>
     <v-footer
@@ -271,22 +278,27 @@
     >
       <v-card tile >
         <v-layout row>
-          <v-card-text>
+          <v-card-text style="width: auto;">
             Diese Website verwendet KEINE Cookies, um Ihre Erfahrung zu verbessern.<br>
             Die neuen Datenschutzrichtlinien werden von einer einfachen informativen Webseite ohne Nutzerdaten oder Werbung direkt erfüllt.<br>
             Durch Klicken auf "Nicht mehr Anzeigen" Stimmen sie lediglich einer Speicherung dessen zu, dass Sie dieses Banner nicht mehr sehen möchten.<br>
             <br>
             0 Werbung, 0 Tracking, 0 Nutzererkennung. So kann das Web funktionieren.
           </v-card-text>
-          <div>
+          <v-spacer />
+          <div class="px-3">
             <v-layout column fill-height justify-center>
-              <v-btn flat color="primary" @click="cookieBanner = false">OK</v-btn>
-              <v-btn flat color="green" @click="toggleCookieBanner()">Nicht mehr Anzeigen</v-btn>
+              <v-btn text color="primary" @click="cookieBanner = false">OK</v-btn>
+              <v-btn text color="green" @click="toggleCookieBanner()">Nicht mehr Anzeigen</v-btn>
             </v-layout>
           </div>
         </v-layout>
       </v-card>
     </v-bottom-sheet>
+
+    <div style="display: none">
+      {{ drkThemeMount }}
+    </div>
   </v-app>
 </template>
 
@@ -297,22 +309,22 @@ export default {
       drawer: false,
       items: [
         {
-          icon: 'home',
+          icon: 'mdi-home',
           title: 'Hallo 👋',
           to: '/'
         },
         {
-          icon: 'person',
+          icon: 'mdi-account',
           title: 'Über Mich',
           to: '/about'
         },
         {
-          icon: 'code',
+          icon: 'mdi-code-tags',
           title: 'Meine Projekte',
           to: '/projects'
         },
         {
-          icon: 'copyright',
+          icon: 'mdi-copyright',
           title: 'Verwendete Ressourcen',
           to: '/resources'
         }
@@ -341,7 +353,8 @@ export default {
       ],
       title: 'Falk Drieschner',
       cookieBanner: false,
-      isNotIE: false
+      isNotIE: false,
+      autoTheme: false
     }
   },
   mounted: function () {
@@ -352,6 +365,40 @@ export default {
       this.cookieBanner = true
     }
     this.isNotIE = true;
+
+    function autoTheme(preferedTheme) {
+        var retVal = false;
+
+        // Absicherung gegen fehlende OS-Unterstützung
+        var themeSelected = window.matchMedia('(prefers-color-scheme: no-preference)')
+
+        if (preferedTheme.media !== 'not all' && !themeSelected.matches) {
+          retVal = preferedTheme.matches;
+        }
+
+        // Setzt autoTheme Objekt
+        $nuxt.$children[$nuxt.$children.length-1].autoTheme = retVal;
+      }
+
+      // Prüft auf Theme-Präferenz und setzt Watcher
+      var preferedTheme = window.matchMedia('(prefers-color-scheme: dark)')
+      autoTheme(preferedTheme)
+      preferedTheme.addListener(autoTheme)
+  },
+  computed: {
+    // Aktualisiert Theme
+    drkThemeMount: function () {
+      if (typeof document !== 'undefined') {
+        if (localStorage.noDark) {
+          this.$vuetify.theme.dark = false
+        }
+        else {
+          this.$vuetify.theme.dark = this.autoTheme
+        }
+      }
+
+      return null
+    }
   },
   methods: {
     toggleCookieBanner () {
@@ -363,6 +410,13 @@ export default {
 </script>
 
 <style>
+  html {
+    font-size: 16px;
+  }
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   .lightbox {
     box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
@@ -370,6 +424,9 @@ export default {
   .darkbox {
     box-shadow: 0 0 20px inset rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, transparent 72px);
+  }
+  .inverted {
+  	filter: invert(100%);
   }
 
   .nonWorkingNotice {
