@@ -364,7 +364,10 @@ export default {
     else {
       this.cookieBanner = true
     }
-    this.isNotIE = true;
+
+    if (navigator.userAgent.indexOf('Trident') < 0 || navigator.userAgent.indexOf('MSIE') < 0) {
+      this.isNotIE = true;
+    }
 
     function autoTheme(preferedTheme) {
         var retVal = false;
