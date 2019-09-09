@@ -6,8 +6,8 @@
       </p>
       <div>
         <p>
-          Hier können sie meine Projekte sehen, die ich in meiner Freizeit entwickelt habe.<br>
-          Klicken sie einfach auf ein Projekt oben, das sie interresiert.<br>
+          Hier können Sie meine Projekte sehen, die ich in meiner Freizeit entwickelt habe.<br>
+          Klicken Sie einfach auf ein Projekt oben, das Sie interresiert.<br>
           <br>
           Da ich Vollzeit arbeite, habe ich leider in meiner Freizeit nicht so viel Zeit um an irgendwelchen Projekten zu arbeiten.<br>
           Deswegen sind die hier aufgelisteten Projekte nicht sonderlich gut gepflegt und teilweise auch Jahre alt.

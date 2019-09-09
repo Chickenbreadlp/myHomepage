@@ -365,7 +365,7 @@ export default {
       this.cookieBanner = true
     }
 
-    if (navigator.userAgent.indexOf('Trident') < 0 || navigator.userAgent.indexOf('MSIE') < 0) {
+    if (navigator.userAgent.indexOf('Trident') < 0 && navigator.userAgent.indexOf('MSIE') < 0) {
       this.isNotIE = true;
     }
 

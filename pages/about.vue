@@ -90,12 +90,12 @@ export default {
           { header: 'Bildung' },
           {
             title: 'Ausbildung zum Fachinformatiker/-in Anwendungsentwicklung',
-            subtitle: "2019 - Abgeschlossen"
+            subtitle: "Abgeschlossen in 2019"
           },
           { divider: true },
           {
             title: 'Erweiterter Sekundarabschluss I',
-            subtitle: "2016 - Abgeschlossen"
+            subtitle: "Abgeschlossen in 2016"
           },
           { header: 'Sprachkenntnisse' },
           {

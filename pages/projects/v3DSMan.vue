@@ -13,9 +13,7 @@
       Entsprechend sind es diese Daten, die von meiner Anwendung hin- und her-kopiert werden.<br>
       <br>
       Der Benutzer hat mehrere Möglichkeiten diese unterschiedlichen virtuellen Systeme zu verwalten.
-      Möglich ist ein Duplizieren, Neu-Erstellen, Umbenennen und Löschen von Systemen.<br>
-      <br>
-      Citra v3DS Manager ist soweit mein aktuellstes Projekt.
+      Möglich ist ein Duplizieren, Neu-Erstellen, Umbenennen und Löschen von Systemen.
       <a href="https://github.com/Chickenbreadlp/CitraV3DSManager" target="none">Github Link</a>
     </p>
   </v-container>
