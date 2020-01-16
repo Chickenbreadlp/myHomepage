@@ -33,9 +33,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '~/plugins/moment'
-  ],
+  plugins: [],
   /*
   ** Manifest
   */
@@ -53,6 +51,14 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
+  buildModules: [
+    '@nuxtjs/moment'
+  ],
+  moment: {
+    defaultLocale: 'de',
+    locales: ['de'],
+    plugins: ['moment-feiertage']
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -72,7 +78,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
+      //dark: false,
       themes: {
         light: {
           primary: colors.lightBlue.darken2,

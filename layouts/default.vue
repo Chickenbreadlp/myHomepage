@@ -21,7 +21,7 @@
 
           <div style="float: right; width: 25%">
             <div style="overflow: hidden">
-              <img src="/images/IMG_20190611_152043.jpg" class="imageRotation" width="195%" style="float: right">
+              <img src="/images/IMG_20190611_152043.jpg" width="195%" style="float: right">
             </div>
           </div>
 
@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="NotIE">
-        Diese Seite benötigt JavaScript für die korrekte Funktionsweise.
+        Diese Seite benötigt JavaScript für die korrekte Funktionsweise. Diese Nachricht kann auch u.u. auftauchen, wenn ihr Browser länger für die Verarbeitung von JavaScript benötigt.
       </div>
     </div>
     <v-navigation-drawer
@@ -226,7 +226,7 @@
                           </v-layout>
                         </template>
 
-                        <v-layout pa-2 column fill-height :class="`${projects[n-1].dark ? 'lightbox white--text': 'darkbox black--text'}`">
+                        <v-layout pa-2 column fill-height :class="`${projects[n-1].dark ? 'lightbox white--text' : 'darkbox black--text'}`">
                           <v-spacer></v-spacer>
                           <v-flex shrink>
                             <div class="subheading">{{ projects[n-1].name }}</div>
@@ -270,7 +270,7 @@
       class="pa-3"
     >
       <v-spacer></v-spacer>
-      <span>&copy; 2019 Falk Drieschner</span>
+      <span>&copy; {{ $moment().format('YYYY') }} Falk Drieschner</span>
     </v-footer>
     <v-bottom-sheet
       v-model="cookieBanner"

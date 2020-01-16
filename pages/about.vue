@@ -48,13 +48,12 @@
           </v-flex>
           <v-flex xs12 sm12 md12 lg5 xl4>
             <v-card :class="this.$vuetify.breakpoint.mdAndDown ? 'mt-4' : 'ml-5'" style="overflow: hidden; height: 900px">
-              <v-img src="/images/IMG_20190611_152043.jpg" height="900px" style="transform: rotate(180deg);" position="end end">
+              <v-img src="/images/IMG_20190611_152043.jpg" height="900px" position="right">
                 <v-layout
                   align-end
                   justify-start
                   fill-height
                   white--text
-                  style="transform: rotate(180deg);"
                 >
                   <div
                     class="caption pl-1 text-box"
