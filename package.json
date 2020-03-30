@@ -5,10 +5,10 @@
   "author": "Falk Drieschner (aka Chickenbread)",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "npmlister -o \"./assets/AllPackages.json\" && nuxt",
+    "build": "npmlister -o \"./assets/AllPackages.json\" && nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "npmlister -o \"./assets/AllPackages.json\" && nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.2",
@@ -24,6 +24,7 @@
     "@nuxtjs/vuetify": "^1.2.0",
     "nodemon": "^1.19.4",
     "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "npmlister": "^1.2.0"
   }
 }

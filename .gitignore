@@ -86,3 +86,6 @@ sw.*
 
 # Mac OSX
 .DS_Store
+
+# Dynamically generated assets
+assets/AllPackages.json

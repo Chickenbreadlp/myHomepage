@@ -84,7 +84,7 @@
             </v-tooltip>
           </template>
           <template v-slot:expanded-item="props">
-            <td :colspan="props.headers.length">{{ props.item.description }}</td>
+            <td :colspan="props.headers.length" v-html="props.item.description"></td>
           </template>
         </v-data-table>
       </v-card-text>
